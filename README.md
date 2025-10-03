@@ -61,29 +61,41 @@ It allows users to chat instantly, view online statuses, and manage messages sec
 
 ## 📂 .env FILE
 MONGO_URI=your_mongodb_connection_string
+
 JWT_SECRET=your_secret_key
+
 CLOUDINARY_CLOUD_NAME=your_cloud_name
+
 CLOUDINARY_API_KEY=your_api_key
+
 CLOUDINARY_API_SECRET=your_api_secret
+
 PORT=5000
 
 
 🔌 API Endpoints
 <h6>Authentication</h6>
 POST /api/auth/signup → Register new user
+
 POST /api/auth/login → Login user
+
 PUT /api/auth/update-profile → Update user profile (Protected)
+
 GET /api/auth/check → Verify auth (Protected)
 
 <h6>Messages</h6>
 GET /api/messages/users → Get users for sidebar (Protected)
+
 GET /api/messages/:id → Get messages with a user (Protected)
+
 GET /api/messages/mark/:id → Mark message as seen (Protected)
+
 POST /api/messages/send/:id → Send message (Protected)
 
 
 ⚡ Socket.io Events
 connection → User connects with userId
-getOnlineUsers → Broadcast online users list
-disconnect → Remove user from online map
 
+getOnlineUsers → Broadcast online users list
+
+disconnect → Remove user from online map
